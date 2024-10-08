@@ -1,0 +1,20 @@
+.campo-texto {
+    margin: 24px 0;
+}
+
+.campo-texto label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+}
+
+.campo-texto input, select{
+    background-color: white;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0 , 0.06);
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-family: "Montserrat", sans-serif;
+}

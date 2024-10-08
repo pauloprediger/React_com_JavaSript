@@ -1,14 +1,15 @@
 import React,{useState} from 'react'
 import './formulario.css';
+import { CampoTexto } from '../CampoTexto/CampoTexto';
 
 export const Formulario = () => {
     const [nome, setNome] = useState('');
-    const [cargo, setCargo] = useState(null);
+    const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
     const[time, setTime] = useState('');
 
     const handleSubmit = (event) => {
-        event.preventDfault();
+        event.preventDefault();
 
         console.log({nome, cargo, imagem, time});
     }
@@ -16,35 +17,30 @@ export const Formulario = () => {
     <div className='divFormulario'>
         <h1 className='tituloFormulario'>Preencha os dados para criar o card de colaborador</h1>
         <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="nome">Nome:</label>
-                <input
-                    type="text"
-                    id="nome"
-                    placeholder='Digite seu nome'
-                    value={nome}
-                    onChange={(e) => setNome(e.target.value)}
+            <CampoTexto
+                label="Nome"
+                type="text"
+                id="nome"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                placeholder="Digite seu nome"
             />
-            </div>
-            <div>
-                <label htmlFor="cargo">Cargo:</label>
-                <input
-                    type="text"
-                    id="cargo"
-                    placeholder='Digite seu cargo'
-                    value={cargo}
-                    onChange={(e) => setCargo(e.target.value)}
-                />
-            </div>
-            <div>
-                <label htmlFor="imagem">Imagem:</label>
-                <input
-                    type="text"
-                    id="imagem"
-                    placeholder='Digite o endereço da imagem'
-                    onChange={(e) => setImagem(e.target.value)}
+            <CampoTexto
+                label="Cargo"
+                type="text"
+                id="cargo"
+                value={cargo}
+                onChange={(e) => setCargo(e.target.value)}
+                placeholder="Digite seu cargo"
             />
-            </div>
+            <CampoTexto
+                label="Imagem"
+                type="text"
+                id="imagem"
+                placeholder="Digite o endereço da imagem"
+                value={imagem}
+                onChange={(e) => setImagem(e.target.value)}
+            />
             <div>
                 <label htmlFor="time">Time:</label>
                 <select

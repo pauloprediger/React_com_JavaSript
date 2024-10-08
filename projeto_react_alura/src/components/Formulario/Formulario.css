@@ -15,7 +15,7 @@ body, input, select, button {
 
 .divFormulario{
     background-color: #F8F8F8;
-    padding: 0px 30px 30px 30px;
+    
     width: 550px;
     border-radius: 30px;
 }
@@ -26,27 +26,11 @@ form {
 }
 
 form > div {
-    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-label {
-    margin-right: 10px;
-    margin-bottom: 5px;
-    font-weight: bolder;
-    font-family: "Montserrat", sans-serif;
-}
-
-input[type='text'], input[type='file'], select {
-    padding: 8px;
-    margin-top: 5px;
-    width: 100%;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    font-family: "Montserrat", sans-serif;
-}
 
 .buttonFormulario{
     padding: 10px 20px;

@@ -1,6 +1,6 @@
-import './App.css'
 import Banner from './components/Banner/Banner'
 import { Formulario } from './components/Formulario/Formulario'
+import { CampoTexto } from './components/CampoTexto/CampoTexto'
 
 
 
